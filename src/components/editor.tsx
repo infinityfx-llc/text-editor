@@ -90,7 +90,7 @@ export default function Editor({
 
         if (key === 'align') {
             let content: Node = extract(range, parent);
-            content = nodeIsEmpty(content) ? new Text('\u200B') : content; // u200B temp fix and optimize?
+            content = nodeIsEmpty(content) ? new Text('\\u200B') : content; // u200B temp fix and optimize?
 
             if (value !== 'left') {
                 const node = insertNode(range, 'div', content);
